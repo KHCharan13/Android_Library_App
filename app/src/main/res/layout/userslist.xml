@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="15sp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+
+ <RelativeLayout
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:padding="20dp">
+
+
+  <TextView
+      android:id="@+id/username"
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:text="User name"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:layout_margin="3dp"
+      android:textSize="25dp"
+      android:textStyle="bold"></TextView>
+
+  <TextView
+      android:id="@+id/usernumber"
+      android:layout_width="250dp"
+      android:layout_height="wrap_content"
+      android:text="USN"
+      android:layout_margin="3dp"
+      android:layout_below="@+id/username"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:textSize="25dp"
+      android:textStyle="bold"></TextView>
+  <Button
+      android:id="@+id/assignButton"
+      android:layout_width="110dp"
+      android:layout_height="wrap_content"
+      android:layout_toRightOf="@+id/username"
+      android:gravity="center"
+      android:layout_margin="5dp"
+      android:text="Assign"
+      android:textAllCaps="false"></Button>
+
+
+
+ </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
