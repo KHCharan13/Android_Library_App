@@ -135,6 +135,7 @@
        android:textAllCaps="false"></Button>
 
   </LinearLayout>
+
   <TextView
       android:id="@+id/link"
       android:layout_width="match_parent"
@@ -146,6 +147,7 @@
       android:textColor="#85000000"
 
       android:textSize="18dp" />
+
   <TextView
       android:id="@+id/linklabel"
       android:layout_width="match_parent"

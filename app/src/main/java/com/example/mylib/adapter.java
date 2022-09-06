@@ -76,7 +76,14 @@ public class adapter extends FirebaseRecyclerAdapter<books,adapter.myViewHolder>
         holder.Genre.setText(model.getGenre());
         holder.Copies.setText(model.getCopies());
         String s= holder.Copies.getText().toString().trim();
-        holder.Blink.setText(model.getUrl2());
+        if(model.getUrl2().isEmpty())
+        {
+            holder.Blink.setText("Link not available");
+        }
+        else{
+            holder.Blink.setText("Click here to access!!");
+
+        }
         if(!s.equals("0"))
         {
             holder.Blink.setVisibility(View.GONE);
@@ -189,7 +196,8 @@ public class adapter extends FirebaseRecyclerAdapter<books,adapter.myViewHolder>
         holder.Blink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent viewIntent =new Intent("android.intent.action.VIEW",Uri.parse("http://www.stackoverflow.com/"));
+                String a = model.getUrl2().toString().trim();
+                Intent viewIntent =new Intent("android.intent.action.VIEW",Uri.parse(a));
                 holder.Blink.getContext().startActivity(viewIntent);
 
             }
